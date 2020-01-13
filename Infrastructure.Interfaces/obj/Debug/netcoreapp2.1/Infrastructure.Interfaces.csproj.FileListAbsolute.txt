@@ -1,0 +1,8 @@
+C:\Users\timur\source\repos\SportStoreApp\Infrastructure.Interfaces\bin\Debug\netcoreapp2.1\Infrastructure.Interfaces.deps.json
+C:\Users\timur\source\repos\SportStoreApp\Infrastructure.Interfaces\bin\Debug\netcoreapp2.1\Infrastructure.Interfaces.dll
+C:\Users\timur\source\repos\SportStoreApp\Infrastructure.Interfaces\bin\Debug\netcoreapp2.1\Infrastructure.Interfaces.pdb
+C:\Users\timur\source\repos\SportStoreApp\Infrastructure.Interfaces\obj\Debug\netcoreapp2.1\Infrastructure.Interfaces.AssemblyInfoInputs.cache
+C:\Users\timur\source\repos\SportStoreApp\Infrastructure.Interfaces\obj\Debug\netcoreapp2.1\Infrastructure.Interfaces.AssemblyInfo.cs
+C:\Users\timur\source\repos\SportStoreApp\Infrastructure.Interfaces\obj\Debug\netcoreapp2.1\Infrastructure.Interfaces.dll
+C:\Users\timur\source\repos\SportStoreApp\Infrastructure.Interfaces\obj\Debug\netcoreapp2.1\Infrastructure.Interfaces.pdb
+C:\Users\timur\source\repos\SportStoreApp\Infrastructure.Interfaces\obj\Debug\netcoreapp2.1\Infrastructure.Interfaces.csprojAssemblyReference.cache

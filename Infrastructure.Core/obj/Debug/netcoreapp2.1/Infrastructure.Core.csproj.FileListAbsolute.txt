@@ -1,0 +1,15 @@
+C:\Users\timur\source\repos\SportStoreApp\Infrastructure.Core\bin\Debug\netcoreapp2.1\Infrastructure.Core.deps.json
+C:\Users\timur\source\repos\SportStoreApp\Infrastructure.Core\bin\Debug\netcoreapp2.1\Infrastructure.Core.dll
+C:\Users\timur\source\repos\SportStoreApp\Infrastructure.Core\bin\Debug\netcoreapp2.1\Infrastructure.Core.pdb
+C:\Users\timur\source\repos\SportStoreApp\Infrastructure.Core\bin\Debug\netcoreapp2.1\Core.dll
+C:\Users\timur\source\repos\SportStoreApp\Infrastructure.Core\bin\Debug\netcoreapp2.1\Data.dll
+C:\Users\timur\source\repos\SportStoreApp\Infrastructure.Core\bin\Debug\netcoreapp2.1\Infrastructure.Interfaces.dll
+C:\Users\timur\source\repos\SportStoreApp\Infrastructure.Core\bin\Debug\netcoreapp2.1\Core.pdb
+C:\Users\timur\source\repos\SportStoreApp\Infrastructure.Core\bin\Debug\netcoreapp2.1\Data.pdb
+C:\Users\timur\source\repos\SportStoreApp\Infrastructure.Core\bin\Debug\netcoreapp2.1\Infrastructure.Interfaces.pdb
+C:\Users\timur\source\repos\SportStoreApp\Infrastructure.Core\obj\Debug\netcoreapp2.1\Infrastructure.Core.csprojAssemblyReference.cache
+C:\Users\timur\source\repos\SportStoreApp\Infrastructure.Core\obj\Debug\netcoreapp2.1\Infrastructure.Core.AssemblyInfoInputs.cache
+C:\Users\timur\source\repos\SportStoreApp\Infrastructure.Core\obj\Debug\netcoreapp2.1\Infrastructure.Core.AssemblyInfo.cs
+C:\Users\timur\source\repos\SportStoreApp\Infrastructure.Core\obj\Debug\netcoreapp2.1\Infrastructure.Core.csproj.CopyComplete
+C:\Users\timur\source\repos\SportStoreApp\Infrastructure.Core\obj\Debug\netcoreapp2.1\Infrastructure.Core.dll
+C:\Users\timur\source\repos\SportStoreApp\Infrastructure.Core\obj\Debug\netcoreapp2.1\Infrastructure.Core.pdb

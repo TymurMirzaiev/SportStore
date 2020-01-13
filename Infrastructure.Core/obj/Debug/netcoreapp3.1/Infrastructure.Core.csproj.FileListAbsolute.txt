@@ -1,0 +1,5 @@
+C:\Users\timur\source\repos\SportStoreApp\Infrastructure.Core\bin\Debug\netcoreapp3.1\Infrastructure.Core.deps.json
+C:\Users\timur\source\repos\SportStoreApp\Infrastructure.Core\bin\Debug\netcoreapp3.1\Infrastructure.Core.dll
+C:\Users\timur\source\repos\SportStoreApp\Infrastructure.Core\obj\Debug\netcoreapp3.1\Infrastructure.Core.csprojAssemblyReference.cache
+C:\Users\timur\source\repos\SportStoreApp\Infrastructure.Core\obj\Debug\netcoreapp3.1\Infrastructure.Core.AssemblyInfoInputs.cache
+C:\Users\timur\source\repos\SportStoreApp\Infrastructure.Core\obj\Debug\netcoreapp3.1\Infrastructure.Core.AssemblyInfo.cs

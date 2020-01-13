@@ -1,0 +1,17 @@
+C:\Users\timur\source\repos\SportStoreApp\DependencyResolver\bin\Debug\netcoreapp2.1\DependencyResolver.deps.json
+C:\Users\timur\source\repos\SportStoreApp\DependencyResolver\bin\Debug\netcoreapp2.1\DependencyResolver.dll
+C:\Users\timur\source\repos\SportStoreApp\DependencyResolver\bin\Debug\netcoreapp2.1\DependencyResolver.pdb
+C:\Users\timur\source\repos\SportStoreApp\DependencyResolver\bin\Debug\netcoreapp2.1\Core.dll
+C:\Users\timur\source\repos\SportStoreApp\DependencyResolver\bin\Debug\netcoreapp2.1\Data.dll
+C:\Users\timur\source\repos\SportStoreApp\DependencyResolver\bin\Debug\netcoreapp2.1\Infrastructure.Core.dll
+C:\Users\timur\source\repos\SportStoreApp\DependencyResolver\bin\Debug\netcoreapp2.1\Infrastructure.Interfaces.dll
+C:\Users\timur\source\repos\SportStoreApp\DependencyResolver\bin\Debug\netcoreapp2.1\Core.pdb
+C:\Users\timur\source\repos\SportStoreApp\DependencyResolver\bin\Debug\netcoreapp2.1\Data.pdb
+C:\Users\timur\source\repos\SportStoreApp\DependencyResolver\bin\Debug\netcoreapp2.1\Infrastructure.Core.pdb
+C:\Users\timur\source\repos\SportStoreApp\DependencyResolver\bin\Debug\netcoreapp2.1\Infrastructure.Interfaces.pdb
+C:\Users\timur\source\repos\SportStoreApp\DependencyResolver\obj\Debug\netcoreapp2.1\DependencyResolver.csprojAssemblyReference.cache
+C:\Users\timur\source\repos\SportStoreApp\DependencyResolver\obj\Debug\netcoreapp2.1\DependencyResolver.AssemblyInfoInputs.cache
+C:\Users\timur\source\repos\SportStoreApp\DependencyResolver\obj\Debug\netcoreapp2.1\DependencyResolver.AssemblyInfo.cs
+C:\Users\timur\source\repos\SportStoreApp\DependencyResolver\obj\Debug\netcoreapp2.1\DependencyResolver.csproj.CopyComplete
+C:\Users\timur\source\repos\SportStoreApp\DependencyResolver\obj\Debug\netcoreapp2.1\DependencyResolver.dll
+C:\Users\timur\source\repos\SportStoreApp\DependencyResolver\obj\Debug\netcoreapp2.1\DependencyResolver.pdb

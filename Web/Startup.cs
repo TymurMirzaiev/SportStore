@@ -61,8 +61,13 @@ namespace Web
             app.UseSession();
             app.UseMvc(routes => {
                 routes.MapRoute(
+                    name: "Error",
+                    template: "Error",
+                    defaults: new { controller = "Error", action = "Error" });
+
+                routes.MapRoute(
                     name: null,
-                    template: "{category}/Page{productPage:int}",
+                    template: "{category}/Page{productPag   e:int}",
                     defaults: new { controller = "Product", action = "List" }
                 );
 

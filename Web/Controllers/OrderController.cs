@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using AutoMapper;
 using Core.DTOs;
 using Data.Entities;
 using Data.Repositories;
+using Infrastructure.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using Web.Models;
 
@@ -13,9 +13,9 @@ namespace Web.Controllers
 {
     public class OrderController : Controller
     {
-        private IOrderRepository _orderRepository;
-        private IMapper _mapper;
-        private Cart _cart;
+        private readonly IOrderRepository _orderRepository;
+        private readonly IMapper _mapper;
+        private readonly Cart _cart;
 
         public OrderController(IMapper mapper, IOrderRepository orderRepository, Cart cart)
         {
@@ -46,7 +46,7 @@ namespace Web.Controllers
 
         public ViewResult Checkout()
         {
-            return View(new Order());
+            return View(new OrderDto());
         }
 
         [HttpPost]

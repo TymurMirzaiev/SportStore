@@ -1,6 +1,3 @@
-C:\Users\timur\source\repos\SportStoreApp\SportStoreApp.Tests\obj\Debug\netcoreapp2.1\SportStoreApp.Tests.csprojAssemblyReference.cache
-C:\Users\timur\source\repos\SportStoreApp\SportStoreApp.Tests\obj\Debug\netcoreapp2.1\SportStoreApp.Tests.AssemblyInfoInputs.cache
-C:\Users\timur\source\repos\SportStoreApp\SportStoreApp.Tests\obj\Debug\netcoreapp2.1\SportStoreApp.Tests.AssemblyInfo.cs
 C:\Users\timur\source\repos\SportStoreApp\SportStoreApp.Tests\bin\Debug\netcoreapp2.1\Web.Views.dll
 C:\Users\timur\source\repos\SportStoreApp\SportStoreApp.Tests\bin\Debug\netcoreapp2.1\Web.Views.pdb
 C:\Users\timur\source\repos\SportStoreApp\SportStoreApp.Tests\bin\Debug\netcoreapp2.1\appsettings.Development.json
@@ -28,6 +25,9 @@ C:\Users\timur\source\repos\SportStoreApp\SportStoreApp.Tests\bin\Debug\netcorea
 C:\Users\timur\source\repos\SportStoreApp\SportStoreApp.Tests\bin\Debug\netcoreapp2.1\DependencyResolver.pdb
 C:\Users\timur\source\repos\SportStoreApp\SportStoreApp.Tests\bin\Debug\netcoreapp2.1\Infrastructure.Core.pdb
 C:\Users\timur\source\repos\SportStoreApp\SportStoreApp.Tests\bin\Debug\netcoreapp2.1\Infrastructure.Interfaces.pdb
+C:\Users\timur\source\repos\SportStoreApp\SportStoreApp.Tests\obj\Debug\netcoreapp2.1\SportStoreApp.Tests.csprojAssemblyReference.cache
+C:\Users\timur\source\repos\SportStoreApp\SportStoreApp.Tests\obj\Debug\netcoreapp2.1\SportStoreApp.Tests.AssemblyInfoInputs.cache
+C:\Users\timur\source\repos\SportStoreApp\SportStoreApp.Tests\obj\Debug\netcoreapp2.1\SportStoreApp.Tests.AssemblyInfo.cs
 C:\Users\timur\source\repos\SportStoreApp\SportStoreApp.Tests\obj\Debug\netcoreapp2.1\SportStoreApp.Tests.csproj.CopyComplete
 C:\Users\timur\source\repos\SportStoreApp\SportStoreApp.Tests\obj\Debug\netcoreapp2.1\SportStoreApp.Tests.dll
 C:\Users\timur\source\repos\SportStoreApp\SportStoreApp.Tests\obj\Debug\netcoreapp2.1\SportStoreApp.Tests.pdb

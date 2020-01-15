@@ -10,6 +10,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using Web.Controllers;
+using Web.Infrastructure;
 using Web.Models.ViewModels;
 using Xunit;
 

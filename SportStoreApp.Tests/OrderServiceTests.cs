@@ -37,7 +37,5 @@ namespace SportStoreApp.Tests
             mock.Verify(p => p.Get(), Times.Once);
             mock.Verify(p => p.SaveOrder(It.IsAny<Order>()), Times.Once);
         }
-
-
     }
 }

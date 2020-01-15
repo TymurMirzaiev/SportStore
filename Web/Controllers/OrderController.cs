@@ -14,16 +14,14 @@ namespace Web.Controllers
 {
     public class OrderController : Controller
     {
-        private readonly IOrderRepository _orderRepository;
         private readonly IOrderService _orderService;
         private readonly IMapper _mapper;
         private readonly Cart _cart;
 
-        public OrderController(IMapper mapper, IOrderService orderService, IOrderRepository orderRepository, Cart cart)
+        public OrderController(IMapper mapper, IOrderService orderService, Cart cart)
         {
             _mapper = mapper;
             _orderService = orderService;
-            _orderRepository = orderRepository;
             _cart = cart;
         }
 

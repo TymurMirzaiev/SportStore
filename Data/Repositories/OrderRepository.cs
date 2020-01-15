@@ -27,5 +27,15 @@ namespace Data.Repositories
             }
             _context.SaveChanges();
         }
+
+        public Order GetWithLines(int id)
+        {
+            var orders = _context.Orders
+                .Include(o => o.Lines)
+                    .ThenInclude(l => l.Product)
+                .FirstOrDefault(o => o.OrderId == id);
+
+            return orders;
+        }
     }
 }

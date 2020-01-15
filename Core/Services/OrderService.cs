@@ -31,8 +31,7 @@ namespace Core.Services
 
         public OrderDto SaveOrder(int orderId)
         {
-            var order = _orderRepository.Get()
-                   .FirstOrDefault(o => o.OrderId == orderId);
+            var order = _orderRepository.GetWithLines(orderId);
             if (order != null)
             {
                 order.Shipped = true;

@@ -11,7 +11,7 @@ namespace Web.Controllers
     {
         private readonly IProductService _productService;
         private readonly IMapper _mapper;
-        public int PageSize = 4;
+        public int PAGE_SIZE = 4;
 
         public ProductController(IMapper mapper, IProductService productService)
         {
@@ -25,13 +25,13 @@ namespace Web.Controllers
             var products = productsDto
                 .Where(p => category == null || p.Category == category)
                 .OrderBy(p => p.ProductId)
-                .Skip((productPage - 1) * PageSize)
-                .Take(PageSize);
+                .Skip((productPage - 1) * PAGE_SIZE)
+                .Take(PAGE_SIZE);
 
             var pagingInfo = new PagingInfo
             {
                 CurrentPage = productPage,
-                ItemsPerPage = PageSize,
+                ItemsPerPage = PAGE_SIZE,
                 TotalItems = category == null ?
                        productsDto.Count() :
                        productsDto.Where(e =>

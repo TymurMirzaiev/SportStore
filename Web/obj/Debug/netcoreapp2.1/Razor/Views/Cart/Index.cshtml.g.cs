@@ -125,7 +125,7 @@ using Web.Infrastructure;
             WriteLiteral("\r\n                </td>\r\n                <td>\r\n                    ");
             EndContext();
             BeginContext(778, 479, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "db8dd26763524174ac88c2af9ef106d2", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "3216b654da244623a86fe7134fe6c50c", async() => {
                 BeginContext(826, 63, true);
                 WriteLiteral("\r\n                        <input type=\"hidden\" name=\"ProductId\"");
                 EndContext();
@@ -199,7 +199,7 @@ WriteAttributeValue("", 1637, Model.ReturnUrl, 1637, 16, false);
             WriteLiteral(">Continue shopping</a>\r\n    ");
             EndContext();
             BeginContext(1682, 100, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "22a1ec3de0b44f54aa6cdfad04cd45e3", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "b6345173de1f4c968541593b3dd9961d", async() => {
                 BeginContext(1754, 24, true);
                 WriteLiteral("\r\n        Checkout\r\n    ");
                 EndContext();

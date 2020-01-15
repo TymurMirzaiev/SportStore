@@ -8,6 +8,7 @@
     ".NETCoreApp,Version=v2.1": {
       "Data/1.0.0": {
         "dependencies": {
+          "Infrastructure.Interfaces": "1.0.0",
           "Microsoft.AspNetCore.Identity": "2.1.1",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "2.1.1",
           "Microsoft.AspNetCore.Mvc.Core": "2.1.1",
@@ -1143,6 +1144,11 @@
           "System.Threading": "4.0.11",
           "System.Xml.ReaderWriter": "4.0.11"
         }
+      },
+      "Infrastructure.Interfaces/1.0.0": {
+        "runtime": {
+          "Infrastructure.Interfaces.dll": {}
+        }
       }
     }
   },
@@ -1928,6 +1934,11 @@
       "sha512": "sha512-Mk2mKmPi0nWaoiYeotq1dgeNK1fqWh61+EK+w4Wu8SWuTYLzpUnschb59bJtGywaPq7SmTuPf44wrXRwbIrukg==",
       "path": "system.xml.xdocument/4.0.11",
       "hashPath": "system.xml.xdocument.4.0.11.nupkg.sha512"
+    },
+    "Infrastructure.Interfaces/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     }
   }
 }

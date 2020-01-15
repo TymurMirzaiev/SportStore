@@ -2,6 +2,7 @@
 using Core.Interfaces.Services;
 using Data.Entities;
 using Data.Repositories;
+using Infrastructure.Core.AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 using Moq;
 using System;
@@ -12,10 +13,12 @@ using Web.Controllers;
 using Web.Models.ViewModels;
 using Xunit;
 
-namespace SportStore.Tests
+namespace SportStoreApp.Tests
 {
     public class ProductControllerTests
     {
+        SportStoreAutoMapper _mapper = new SportStoreAutoMapper();
+
         [Fact]
         public void Can_Paginate()
         {
@@ -31,12 +34,11 @@ namespace SportStore.Tests
             }).AsQueryable<ProductDto>());
             ProductController controller = new ProductController(null, mock.Object);
             //act
-            IEnumerable<ProductDto> actual = (controller.List(null, 2) as ViewResult).ViewData.Model as IEnumerable<ProductDto>;
+            ProductsListViewModel actual = (controller.List(null, 2) as ViewResult).ViewData.Model as ProductsListViewModel;
             //assert
-            ProductDto[] productDtos = actual.ToArray();
-            Assert.True(productDtos.Length == 2);
-            Assert.Equal("P3", productDtos[0].Name);
-            Assert.Equal("P4", productDtos[1].Name);
+            ProductDto[] productDtos = actual.Products.ToArray();
+            Assert.True(productDtos.Length == 1);
+            Assert.Equal("P5", productDtos[0].Name);
         }
 
         [Fact]
@@ -56,7 +58,7 @@ namespace SportStore.Tests
 
             // Arrange
             ProductController controller =
-                new ProductController(null, mock.Object) { PageSize = 3 };
+                new ProductController(null, mock.Object) { PAGE_SIZE = 3 };
 
             // Act
             ProductsListViewModel result =
@@ -68,6 +70,30 @@ namespace SportStore.Tests
             Assert.Equal(3, pageInfo.ItemsPerPage);
             Assert.Equal(5, pageInfo.TotalItems);
             Assert.Equal(2, pageInfo.TotalPages);
+        }
+
+        [Fact]
+        public void Can_Filter_Products()
+        {
+            //arrange
+            Mock<IProductService> mock = new Mock<IProductService>();
+            mock.Setup(m => m.GetAll()).Returns((new ProductDto[] {
+                new ProductDto {ProductId = 1, Name = "P1", Category = "Cat1"},
+                new ProductDto {ProductId = 2, Name = "P2", Category = "Cat2"},
+                new ProductDto {ProductId = 3, Name = "P3", Category = "Cat1"},
+                new ProductDto {ProductId = 4, Name = "P4", Category = "Cat2"},
+                new ProductDto {ProductId = 5, Name = "P5", Category = "Cat3"}
+            }).AsQueryable<ProductDto>());
+            ProductController controller = new ProductController(_mapper, mock.Object);
+            controller.PAGE_SIZE = 3;
+            //act
+            ProductDto[] result = (controller.List("Cat2", 1).ViewData.Model as ProductsListViewModel)
+                    .Products.ToArray();
+
+            // Assert
+            Assert.Equal(2, result.Length);
+            Assert.True(result[0].Name == "P2" && result[0].Category == "Cat2");
+            Assert.True(result[1].Name == "P4" && result[1].Category == "Cat2");
         }
     }
 }

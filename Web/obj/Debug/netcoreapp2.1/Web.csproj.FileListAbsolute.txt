@@ -55,3 +55,5 @@ C:\Users\timur\source\repos\SportStoreApp\Web\obj\Debug\netcoreapp2.1\Web.csproj
 C:\Users\timur\source\repos\SportStoreApp\Web\obj\Debug\netcoreapp2.1\Web.dll
 C:\Users\timur\source\repos\SportStoreApp\Web\obj\Debug\netcoreapp2.1\Web.pdb
 C:\Users\timur\source\repos\SportStoreApp\Web\obj\Debug\netcoreapp2.1\Razor\Views\Account\Login.cshtml.g.cs
+C:\Users\timur\source\repos\SportStoreApp\Web\obj\Debug\netcoreapp2.1\Razor\Views\Admin\Index.cshtml.g.cs
+C:\Users\timur\source\repos\SportStoreApp\Web\obj\Debug\netcoreapp2.1\Razor\Views\Admin\Edit.cshtml.g.cs

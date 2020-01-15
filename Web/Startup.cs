@@ -1,5 +1,6 @@
 ﻿using Data.Context;
 using DependenciesResolver;
+using Infrastructure.Interfaces;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -43,11 +44,12 @@ namespace Web
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env, IIdentityInitializer identityInitializer)
         {
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
+                identityInitializer.SeedData();
             }
             else
             {
@@ -60,14 +62,12 @@ namespace Web
             app.UseCookiePolicy();
             app.UseSession();
             app.UseMvc(routes => {
-                routes.MapRoute(
-                    name: "Error",
-                    template: "Error",
+                routes.MapRoute(name: "Error", template: "Error",
                     defaults: new { controller = "Error", action = "Error" });
 
                 routes.MapRoute(
                     name: null,
-                    template: "{category}/Page{productPag   e:int}",
+                    template: "{category}/Page{productPage:int}",
                     defaults: new { controller = "Product", action = "List" }
                 );
 
@@ -90,7 +90,6 @@ namespace Web
 
                 routes.MapRoute(name: null, template: "{controller}/{action}/{id?}");
             });
-            
         }
     }
 }

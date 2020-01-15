@@ -8,3 +8,6 @@ C:\Users\timur\source\repos\SportStoreApp\Data\obj\Debug\netcoreapp2.1\Data.Asse
 C:\Users\timur\source\repos\SportStoreApp\Data\obj\Debug\netcoreapp2.1\Data.dll
 C:\Users\timur\source\repos\SportStoreApp\Data\obj\Debug\netcoreapp2.1\Data.pdb
 C:\Users\timur\source\repos\SportStoreApp\Data\obj\Debug\netcoreapp2.1\Data.csprojAssemblyReference.cache
+C:\Users\timur\source\repos\SportStoreApp\Data\bin\Debug\netcoreapp2.1\Infrastructure.Interfaces.dll
+C:\Users\timur\source\repos\SportStoreApp\Data\bin\Debug\netcoreapp2.1\Infrastructure.Interfaces.pdb
+C:\Users\timur\source\repos\SportStoreApp\Data\obj\Debug\netcoreapp2.1\Data.csproj.CopyComplete

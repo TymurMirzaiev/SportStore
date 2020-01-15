@@ -7,45 +7,34 @@ using System.Linq;
 
 namespace Data.Repositories
 {
-    public class ProductRepository : IRepository<Product>
+    public class ProductRepository : EFGenericRepository<Product>, IProductRepository
     {
         private readonly ApplicationDbContext _context;
 
         public ProductRepository(ApplicationDbContext context)
+            :base(context)
         {
             _context = context;
         }
 
-        public void Create(Product item)
+        public void SaveOrder(Product product)
         {
-            _context.Products.Add(item);
-            _context.SaveChanges();
-        }
-
-        public Product FindById(int id)
-        {
-            return _context.Products.Find(id);
-        }
-
-        public IEnumerable<Product> Get()
-        {
-            return _context.Products.Skip(1).AsNoTracking().AsQueryable();
-        }
-
-        public IEnumerable<Product> Get(Func<Product, bool> predicate)
-        {
-            return _context.Products.AsNoTracking().Where(predicate).AsEnumerable();
-        }
-
-        public void Remove(Product item)
-        {
-            _context.Products.Remove(item);
-            _context.SaveChanges();
-        }
-
-        public void Update(Product item)
-        {
-            _context.Entry(item).State = EntityState.Modified;
+            if (product.ProductId == 0)
+            {
+                _context.Products.Add(product);
+            }
+            else
+            {
+                Product dbEntry = _context.Products
+                    .FirstOrDefault(p => p.ProductId == product.ProductId);
+                if (dbEntry != null)
+                {
+                    dbEntry.Name = product.Name;
+                    dbEntry.Description = product.Description;
+                    dbEntry.Price = product.Price;
+                    dbEntry.Category = product.Category;
+                }
+            }
             _context.SaveChanges();
         }
     }

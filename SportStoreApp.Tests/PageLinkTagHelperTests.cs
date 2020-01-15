@@ -10,7 +10,7 @@ using Web.Infrastructure;
 using Web.Models.ViewModels;
 using Xunit;
 
-namespace SportStore.Tests
+namespace SportStoreApp.Tests
 {
     public class PageLinkTagHelperTests
     {

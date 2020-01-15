@@ -28,7 +28,6 @@ namespace Data.Context
         {
             base.OnModelCreating(modelBuilder);
             DatabaseInitializer.SeedData(modelBuilder);
-            //IdentityDatabaseInitializer.EnsurePopulated()
         }
     }
 }

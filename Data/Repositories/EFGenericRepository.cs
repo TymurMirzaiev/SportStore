@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Data.Context;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,10 +9,10 @@ namespace Data.Repositories
 {
     public abstract class EFGenericRepository<TEntity> : IRepository<TEntity> where TEntity : class
     {
-        readonly DbContext _context;
+        readonly ApplicationDbContext _context;
         readonly DbSet<TEntity> _dbSet;
 
-        public EFGenericRepository(DbContext context)
+        public EFGenericRepository(ApplicationDbContext context)
         {
             _context = context;
             _dbSet = context.Set<TEntity>();
@@ -41,10 +42,12 @@ namespace Data.Repositories
             _context.Entry(item).State = EntityState.Modified;
             _context.SaveChanges();
         }
-        public void Remove(TEntity item)
+        public TEntity Remove(TEntity item)
         {
             _dbSet.Remove(item);
             _context.SaveChanges();
+
+            return item;
         }
     }
 }

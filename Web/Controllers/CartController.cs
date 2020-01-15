@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Core.DTOs;
+using Core.Interfaces.Services;
 using Data.Entities;
 using Data.Repositories;
 using Infrastructure.Interfaces;
@@ -15,12 +16,16 @@ namespace Web.Controllers
     public class CartController : Controller
     {
         private IRepository<Product> _productRepository;
+        private readonly IProductService _productService;
         private IMapper _mapper;
         private Cart _cart;
 
-        public CartController(IMapper mapper, IRepository<Product> productRepository, Cart cart)
+        public CartController(IMapper mapper, IProductService productService, 
+            IRepository<Product> productRepository, 
+            Cart cart)
         {
             _mapper = mapper;
+            _productService = productService;
             _productRepository = productRepository;
             _cart = cart;
         }
@@ -36,25 +41,22 @@ namespace Web.Controllers
 
         public RedirectToActionResult AddToCart(int productId, string returnUrl)
         {
-            Product product = _productRepository.Get()
-                .FirstOrDefault(p => p.ProductId == productId);
-            var productDto = _mapper.Map<Product, ProductDto>(product);
+            ProductDto product = _productService.GetById(productId);
             if (product != null)
             {
-                _cart.AddItem(productDto, 1);
+                _cart.AddItem(product, 1);
             }
+
             return RedirectToAction("Index", new { returnUrl });
         }
 
         public RedirectToActionResult RemoveFromCart(int productId,
                 string returnUrl)
         {
-            Product product = _productRepository.Get()
-                .FirstOrDefault(p => p.ProductId == productId);
-            var productDto = _mapper.Map<Product, ProductDto>(product);
+            ProductDto product = _productService.GetById(productId);
             if (product != null)
             {
-                _cart.RemoveLine(productDto);
+                _cart.RemoveLine(product);
             }
             return RedirectToAction("Index", new { returnUrl });
         }

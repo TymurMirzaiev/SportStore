@@ -11,9 +11,9 @@ namespace Core.Services
     public class ProductService : IProductService
     {
         private readonly IMapper _mapper;
-        private readonly IRepository<Product> _productRepository;
+        private readonly IProductRepository _productRepository;
 
-        public ProductService(IMapper mapper, IRepository<Product> productRepository)
+        public ProductService(IMapper mapper, IProductRepository productRepository)
         {
             _mapper = mapper;
             _productRepository = productRepository;
@@ -25,6 +25,30 @@ namespace Core.Services
             var productsDto = _mapper.Map<IEnumerable<Product>, IEnumerable<ProductDto>>(products);
 
             return productsDto;
+        }
+
+        public ProductDto GetById(int productId)
+        {
+            var product = _productRepository.Get()
+                .FirstOrDefault(p => p.ProductId == productId);
+            var productDto = _mapper.Map<Product, ProductDto>(product);
+
+            return productDto;
+        }
+
+        public ProductDto Remove(ProductDto productDto)
+        {
+            var product = _mapper.Map<ProductDto, Product>(productDto);
+            var res = _productRepository.Remove(product);
+            productDto = _mapper.Map<Product, ProductDto>(res);
+            
+            return productDto;
+        }
+
+        public void SaveOrder(ProductDto productDto)
+        {
+            var product = _mapper.Map<ProductDto, Product>(productDto);
+            _productRepository.SaveOrder(product);
         }
     }
 }

@@ -4,6 +4,7 @@ using Data.Context;
 using Data.Entities;
 using Data.Repositories;
 using Infrastructure.Core.AutoMapper;
+using Infrastructure.Interfaces;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -22,7 +23,10 @@ namespace DependenciesResolver
 
             services.AddTransient<IRepository<Product>, ProductRepository>();
             services.AddTransient<IOrderRepository, OrderRepository>();
+            services.AddTransient<IProductRepository, ProductRepository>();
+
             services.AddTransient<IProductService, ProductService>();
+            services.AddTransient<IOrderService, OrderService>();
 
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(connection));
@@ -30,6 +34,8 @@ namespace DependenciesResolver
             services.AddIdentity<IdentityUser, IdentityRole>()
                 .AddEntityFrameworkStores<ApplicationDbContext>()
                 .AddDefaultTokenProviders();
+
+            services.AddSingleton<IIdentityInitializer, IdentityInitializer>();
         }
     }
 }

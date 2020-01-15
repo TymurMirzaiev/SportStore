@@ -88,7 +88,11 @@
         },
         "frameworks": {
           "netcoreapp2.1": {
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\timur\\source\\repos\\SportStoreApp\\Infrastructure.Interfaces\\Infrastructure.Interfaces.csproj": {
+                "projectPath": "C:\\Users\\timur\\source\\repos\\SportStoreApp\\Infrastructure.Interfaces\\Infrastructure.Interfaces.csproj"
+              }
+            }
           }
         },
         "warningProperties": {

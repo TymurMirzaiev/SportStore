@@ -20,7 +20,6 @@ namespace Web.Controllers
         {
             userManager = userMgr;
             signInManager = signInMgr;
-            //IdentitySeedData.EnsurePopulated(userMgr).Wait();
         }
 
         [AllowAnonymous]
@@ -47,7 +46,8 @@ namespace Web.Controllers
                     if ((await signInManager.PasswordSignInAsync(user,
                             loginModel.Password, false, false)).Succeeded)
                     {
-                        return Redirect(loginModel?.ReturnUrl ?? "/Admin/Index");
+                        string reference = loginModel?.ReturnUrl ?? "/Admin/Index";
+                        return Redirect(reference);
                     }
                 }
             }

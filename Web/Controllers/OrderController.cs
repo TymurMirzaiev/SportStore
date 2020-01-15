@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Core.DTOs;
+using Core.Interfaces.Services;
 using Data.Entities;
 using Data.Repositories;
 using Infrastructure.Interfaces;
@@ -14,33 +15,29 @@ namespace Web.Controllers
     public class OrderController : Controller
     {
         private readonly IOrderRepository _orderRepository;
+        private readonly IOrderService _orderService;
         private readonly IMapper _mapper;
         private readonly Cart _cart;
 
-        public OrderController(IMapper mapper, IOrderRepository orderRepository, Cart cart)
+        public OrderController(IMapper mapper, IOrderService orderService, IOrderRepository orderRepository, Cart cart)
         {
             _mapper = mapper;
+            _orderService = orderService;
             _orderRepository = orderRepository;
             _cart = cart;
         }
 
         public ViewResult List()
         {
-            var orders = _orderRepository.Get()
-                .Where(o => !o.Shipped);
+            var orders = _orderService.GetOrdersShipped();
             return View(orders);
         }
 
         [HttpPost]
         public IActionResult MarkShipped(int orderID)
         {
-            Order order = _orderRepository.Get()
-                .FirstOrDefault(o => o.OrderId == orderID);
-            if (order != null)
-            {
-                order.Shipped = true;
-                _orderRepository.SaveOrder(order);
-            }
+            _orderService.SaveOrder(orderID);
+
             return RedirectToAction(nameof(List));
         }
 
@@ -50,7 +47,7 @@ namespace Web.Controllers
         }
 
         [HttpPost]
-        public IActionResult Checkout(Order order)
+        public IActionResult Checkout(OrderDto order)
         {
             if (_cart.Lines.Count() == 0)
             {
@@ -59,8 +56,9 @@ namespace Web.Controllers
             if (ModelState.IsValid)
             {
                 var cartLines = _cart.Lines.ToArray();
-                order.Lines = _mapper.Map<ICollection<CartLineDto>, ICollection<CartLine>>(cartLines);
-                _orderRepository.SaveOrder(order);
+                order.Lines = cartLines;
+                _orderService.SaveOrder(order);
+
                 return RedirectToAction(nameof(Completed));
             }
             else

@@ -10,7 +10,7 @@ namespace Data.Repositories
         TEntity FindById(int id);
         IEnumerable<TEntity> Get();
         IEnumerable<TEntity> Get(Func<TEntity, bool> predicate);
-        void Remove(TEntity item);
+        TEntity Remove(TEntity item);
         void Update(TEntity item);
     }
 }

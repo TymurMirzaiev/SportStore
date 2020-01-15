@@ -95,7 +95,7 @@ using Web.Infrastructure;
 #line default
 #line hidden
             BeginContext(298, 218, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "50b28455fa18403996953f2ae25adfc0", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "6a8e6962030642f28812a7c9e0b929ad", async() => {
                 BeginContext(469, 43, true);
                 WriteLiteral("\r\n    <i class=\"fa fa-shopping-cart\"></i>\r\n");
                 EndContext();

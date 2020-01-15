@@ -1,13 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Core.DTOs;
+﻿using Core.DTOs;
 using Core.Interfaces.Services;
-using Data.Entities;
-using Data.Repositories;
 using Infrastructure.Interfaces;
 using Microsoft.AspNetCore.Mvc;
+using System.Linq;
 using Web.Models;
 
 namespace Web.Controllers

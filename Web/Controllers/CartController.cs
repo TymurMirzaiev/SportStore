@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Core.DTOs;
+﻿using Core.DTOs;
 using Core.Interfaces.Services;
 using Data.Entities;
 using Data.Repositories;
@@ -15,18 +11,16 @@ namespace Web.Controllers
 {
     public class CartController : Controller
     {
-        private IRepository<Product> _productRepository;
         private readonly IProductService _productService;
         private IMapper _mapper;
         private Cart _cart;
 
-        public CartController(IMapper mapper, IProductService productService, 
-            IRepository<Product> productRepository, 
+        public CartController(IMapper mapper, IProductService productService,
+            IRepository<Product> productRepository,
             Cart cart)
         {
             _mapper = mapper;
             _productService = productService;
-            _productRepository = productRepository;
             _cart = cart;
         }
 

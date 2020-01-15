@@ -34,7 +34,7 @@ namespace DependenciesResolver
             services.AddIdentity<IdentityUser, IdentityRole>()
                 .AddEntityFrameworkStores<ApplicationDbContext>()
                 .AddDefaultTokenProviders();
-            
+
             services.Configure<IdentityOptions>(options =>
             {
                 options.Password.RequireDigit = false;

@@ -1,5 +1,4 @@
-﻿using Data.Context;
-using DependenciesResolver;
+﻿using DependenciesResolver;
 using Infrastructure.Interfaces;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -34,7 +33,7 @@ namespace Web
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
             services.RegisterDependencies(Configuration);
-            
+
             services.AddSingleton<Cart>(sp => SessionCart.GetCart(sp));
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 
@@ -61,7 +60,8 @@ namespace Web
             app.UseStaticFiles();
             app.UseCookiePolicy();
             app.UseSession();
-            app.UseMvc(routes => {
+            app.UseMvc(routes =>
+            {
                 routes.MapRoute(name: "Error", template: "Error",
                     defaults: new { controller = "Error", action = "Error" });
 

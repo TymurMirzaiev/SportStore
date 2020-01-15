@@ -1,10 +1,7 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using System.Linq;
-using Microsoft.AspNetCore.Authorization;
-using Data.Entities;
-using Data.Repositories;
+﻿using Core.DTOs;
 using Core.Interfaces.Services;
-using Core.DTOs;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 
 namespace SportsStore.Controllers
 {
@@ -19,7 +16,7 @@ namespace SportsStore.Controllers
             _productService = productService;
         }
 
-        public ViewResult Index() 
+        public ViewResult Index()
         {
             var products = _productService.GetAll();
 

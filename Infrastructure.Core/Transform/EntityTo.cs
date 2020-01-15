@@ -1,9 +1,6 @@
 ﻿using AutoMapper;
 using Core.DTOs;
 using Data.Entities;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Infrastructure.Core.AutoMapper.Transform
 {

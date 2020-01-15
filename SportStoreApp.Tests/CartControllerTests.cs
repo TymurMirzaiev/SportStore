@@ -2,9 +2,6 @@
 using Core.Interfaces.Services;
 using Infrastructure.Core.AutoMapper;
 using Moq;
-using System;
-using System.Collections.Generic;
-using System.Text;
 using Web.Controllers;
 using Web.Models;
 using Xunit;
@@ -30,7 +27,7 @@ namespace SportStoreApp.Tests
             mockProductService.Setup(p => p.GetById(It.IsAny<int>()))
                 .Returns(new ProductDto { ProductId = 1 });
             //act
-            CartController cartController = new CartController(_mapper, mockProductService.Object, 
+            CartController cartController = new CartController(_mapper, mockProductService.Object,
                 null, mockCart.Object);
             cartController.AddToCart(1, null);
             //assert

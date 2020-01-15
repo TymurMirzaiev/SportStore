@@ -1,8 +1,5 @@
 ﻿using Data.Context;
 using Data.Entities;
-using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
 using System.Linq;
 
 namespace Data.Repositories
@@ -12,7 +9,7 @@ namespace Data.Repositories
         private readonly ApplicationDbContext _context;
 
         public ProductRepository(ApplicationDbContext context)
-            :base(context)
+            : base(context)
         {
             _context = context;
         }

@@ -1,19 +1,16 @@
 ﻿using Data.Context;
 using Data.Entities;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
 namespace Data.Repositories
 {
-    public class OrderRepository: EFGenericRepository<Order>, IOrderRepository
+    public class OrderRepository : EFGenericRepository<Order>, IOrderRepository
     {
         private readonly ApplicationDbContext _context;
 
         public OrderRepository(ApplicationDbContext context)
-            :base(context)
+            : base(context)
         {
             _context = context;
         }

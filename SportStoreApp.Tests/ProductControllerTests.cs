@@ -1,14 +1,9 @@
 ﻿using Core.DTOs;
 using Core.Interfaces.Services;
-using Data.Entities;
-using Data.Repositories;
 using Infrastructure.Core.AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 using Moq;
-using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using Web.Controllers;
 using Web.Infrastructure;
 using Web.Models.ViewModels;

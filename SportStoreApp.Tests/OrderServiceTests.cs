@@ -4,7 +4,10 @@ using Data.Entities;
 using Data.Repositories;
 using Infrastructure.Core.AutoMapper;
 using Moq;
+using System;
+using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using Xunit;
 
 namespace SportStoreApp.Tests
